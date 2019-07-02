@@ -86,7 +86,7 @@ class Out(object):
 
     def init(self, title=None):
         if title: self._title = title
-        
+
         self.raw(self._banner())
         self.yellow(u"[{0}]".format(self._title))
         self.raw(self._LINECHAR * self._WIDTH)
@@ -148,15 +148,15 @@ class Out(object):
 
 
     @classmethod
-    def info(cls, msg): 
+    def info(cls, msg):
         print "[i]:", cls.colorize(msg, 'raw')
 
     @classmethod
-    def error(cls, msg): 
+    def error(cls, msg):
         print cls.R("[e]:"), cls.R(msg)
 
     @classmethod
-    def wraning(cls, msg): 
+    def wraning(cls, msg):
         print cls.Y("[w]:"), cls.Y(msg)
 
     @classmethod
@@ -209,7 +209,6 @@ class Config(Dict):
             exit(1)
 
         self['datapath'] = data_path
-
         self['featurepath'] = os.path.join(self['datapath'], "features")
         self['evalpath'] = os.path.join(self['featurepath'], "evals")
         self['mapfile'] = os.path.join(self['datapath'], "filemap")
@@ -220,8 +219,4 @@ class Config(Dict):
         self['pkgpath'] = os.path.dirname(os.path.dirname(
             os.path.realpath(__file__)))
 
-
-
-
 conf = Config()
-

@@ -118,7 +118,7 @@ class File(object):
                 for index, line in enumerate(self._formated_lines):
                     if match.start()>=line[1][0] and match.start()<line[1][1]:
                         ctxlines = self.get_context_lines(index+1, ctxrange)
-                        matchctx = MatchContext(self._filename, pattern.pattern, 
+                        matchctx = MatchContext(self._filename, pattern.pattern,
                             index+1, ctxlines)
 
                         result.append(matchctx)
@@ -136,7 +136,7 @@ class FileManager(object):
 
     def __init__(self):
         # 文件类型映射信息，结构:
-        #     {'extensions': 
+        #     {'extensions':
         #         [{'pattern':xx, 'scope':xx}, ...]
         #      'metainfos':
         #         [{'pattern':xx, 'scope':xx}, ...]
@@ -232,7 +232,7 @@ class FileManager(object):
                 if filename.endswith(ext):
                     is_ext_match = True
                     break
-            
+
             if not is_ext_match:
                 return True
 
