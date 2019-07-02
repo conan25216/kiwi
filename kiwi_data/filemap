@@ -22,6 +22,9 @@ extensions:
   - pattern: "\\.sh$"
     scope: linux-shell
 
+  - pattern: "\\.conan$"
+    scope: conan-test
+
 metainfos:
   - pattern: "#!/usr/bin\\w+python"
     scope: python
